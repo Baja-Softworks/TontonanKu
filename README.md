@@ -1,17 +1,19 @@
 # 📝 TontonanKu
 
-### Aplikasi untuk Melihat List Tontonan [![GitHub release](https://img.shields.io/github/release/Baja-Softworks/TontonanKu.svg)](https://GitHub.com/Baja-Softworks/TontonanKu/releases/)
+### Aplikasi Desktop untuk Melihat List Tontonan [![GitHub release](https://img.shields.io/github/release/Baja-Softworks/TontonanKu.svg)](https://GitHub.com/Baja-Softworks/TontonanKu/releases/)
 <br>
 
-![Thumb1](/assets/img/1.png "TontonanKu")
+![TontonanKu - Preview](/assets/img/TontonanKu-v1-Preview.png "TontonanKu")
 
-Size:   
+![TontonanKu - Themes Preview](/assets/img/TontonanKu-v1-Themes-Preview.gif "TontonanKu - Themes Preview")
+
+Size: 82 MB 
 Version: v1.0.0  
-Tanggal Rilis:   
+Tanggal Rilis: 11 Maret 2021
 Sistem Operasi (OS): Windows 10  
 Developer: Iqbal Anggoro
   
-[**Download**](https://github.com/Baja-Softworks/TontonanKu/releases/download/)
+[**Download**](https://github.com/Baja-Softworks/TontonanKu/releases/download/v1.0.0/TontonanKu-Setup-1.0.0.exe)
 
   
 
