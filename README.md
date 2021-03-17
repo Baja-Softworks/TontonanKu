@@ -1,22 +1,22 @@
-# 📝 TontonanKu [![GitHub release](https://img.shields.io/github/release/Baja-Softworks/TontonanKu.svg)](https://GitHub.com/Baja-Softworks/TontonanKu/releases/) [![Windows](https://img.shields.io/badge/platform-Windows-0078d7.svg)](https://en.wikipedia.org/wiki/Microsoft_Windows) 
+# 📝 TontonanKu 📋 [![GitHub release](https://img.shields.io/github/release/Baja-Softworks/TontonanKu.svg)](https://GitHub.com/Baja-Softworks/TontonanKu/releases/) [![Windows](https://img.shields.io/badge/platform-Windows-0078d7.svg)](https://en.wikipedia.org/wiki/Microsoft_Windows) 
 
+> **Aplikasi Desktop untuk Melihat List Tontonan**
 
-#### Aplikasi Desktop untuk Melihat List Tontonan
-> **Download**: https://baja-softworks.github.io/download/TontonanKu.html
 <br>
 
+![TontonanKu - Preview](./assets/img/TontonanKu-v1-Preview.png "TontonanKu")
+![TontonanKu - Themes Preview](./assets/img/TontonanKu-v1-Themes-Preview.gif "TontonanKu - Themes Preview")
 
-![TontonanKu - Preview](/assets/img/TontonanKu-v1-Preview.png "TontonanKu")
-![TontonanKu - Themes Preview](/assets/img/TontonanKu-v1-Themes-Preview.gif "TontonanKu - Themes Preview")
 
-
-## Details
+## Details 
 *   **Size: 82 MB**
 *   **Version: v1.0.0**  
 *   **Tanggal Rilis: 11 Maret 2021**
 *   **Sistem Operasi (OS): Windows 10**
 <!-- *   **Developer: Iqbal Anggoro | Publisher [Baja Softworks](https://baja-softworks.github.io)** -->
-[Download](https://github.com/Baja-Softworks/TontonanKu/releases/download/v1.0.0/TontonanKu-Setup-1.0.0.exe)
+<br>
+
+[Download disini!](https://github.com/Baja-Softworks/TontonanKu/releases/download/v1.0.0/TontonanKu-Setup-1.0.0.exe)
 
 
 ### Bantuan, Lapor Bug, dan Umpan Balik
@@ -24,7 +24,7 @@
 
 
 ### Support / Donasi
-- [Trakteer](https://trakteer.id/sutanlab)
+- [Trakteer](https://trakteer.id/bajasoftworks)
 
 
 ### Lisensi
@@ -33,6 +33,6 @@ MIT
 
 
 ### Notes / ToDo
-- [x] Fitur Update
-- [ ] Dapat digunakan Secara Offline
-- [ ] Cross platform (Hanya Support Platform Windows OS)
+- [x]  Fitur Update
+- [ ]  Dapat digunakan Secara Offline
+- [ ]  Cross platform (Hanya Support Platform Windows OS)
