@@ -6,7 +6,9 @@
 
 ![TontonanKu - Themes Preview](https://baja-softworks.github.io/assets/images/TontonanKu-v1-Themes-Preview.gif "TontonanKu - Themes Preview")
 
-## Details 
+---
+
+### Details 
 *   **Size: 81.7 MB**
 
 *   **Version:** [![GitHub release](https://img.shields.io/github/release/Baja-Softworks/TontonanKu.svg)](#) 
