@@ -9,13 +9,13 @@
 ## Details 
 *   **Size: 81.7 MB**
 
-*   **Version:** [![GitHub release](https://img.shields.io/github/release/Baja-Softworks/TontonanKu.svg)]() 
+*   **Version:** [![GitHub release](https://img.shields.io/github/release/Baja-Softworks/TontonanKu.svg)](#) 
 
 *   **Tanggal Rilis: 11 Maret 2021**  [![GitHub release](https://img.shields.io/github/release-date/Baja-Softworks/TontonanKu?color=0078d7)](#) 
 
-*   **Platform: Windows** [![Windows](https://img.shields.io/badge/platform-Windows-0078d7.svg)]() 
+*   **Platform: Windows** [![Windows](https://img.shields.io/badge/platform-Windows-0078d7.svg)](#) 
 
-*   **Downloads**: [![Downloaded](https://img.shields.io/github/downloads/Baja-Softworks/TontonanKu/latest/total?color=0078d7)]()
+*   **Downloads**: [![Downloaded](https://img.shields.io/github/downloads/Baja-Softworks/TontonanKu/latest/total?color=0078d7)](#)
 
 <!-- *   **Developer: Iqbal Anggoro | Publisher [Baja Softworks](https://baja-softworks.github.io)** -->
 
