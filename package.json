@@ -1,0 +1,68 @@
+{
+  "name": "tontonanku",
+  "productName": "TontonanKu",
+  "version": "1.0.1",
+  "description": "Aplikasi Desktop untuk Melihat List Tontonan",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "dev": "nodemon --exec electron .",
+    "deploy": "git subtree push --prefix src origin gh-pages",
+    "build": "electron-builder",
+    "release": "electron-builder --publish always"
+  },
+  "build": {
+    "appId": "com.bajasoftworks.tontonanku",
+    "directories": {
+      "output": "src/build/${version}"
+    },
+    "win": {
+      "publisherName": "Baja Softworks",
+      "verifyUpdateCodeSignature": false,
+      "icon": "src/img/icons.ico",
+      "publish": [
+        {
+          "provider": "github",
+          "owner": "Baja-Softworks",
+          "repo": "TontonanKu"
+        }
+      ],
+      "target": [
+        "nsis"
+      ],
+      "requestedExecutionLevel": "requireAdministrator"
+    },
+    "nsis": {
+      "installerIcon": "src/img/icons.ico",
+      "uninstallerIcon": "src/img/icons.ico",
+      "uninstallDisplayName": "TontonanKu",
+      "license": "lisensi_id.txt",
+      "perMachine": true,
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Baja-Softworks/List-TontonanKu.git"
+  },
+  "author": "Iqbal Anggoro",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^11.1.1",
+    "electron-builder": "^22.8.1",
+    "electron-reload": "^1.5.0",
+    "electron-reloader": "^1.1.0",
+    "electron-updater": "^4.3.5",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "electron-log": "^4.3.2",
+    "electron-main-window": "^1.0.4",
+    "electron-progressbar": "^1.2.0",
+    "electron-reloader": "^1.1.0",
+    "electron-updater": "^4.3.5",
+    "electron-util": "^0.14.2"
+  }
+}
