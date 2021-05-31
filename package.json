@@ -15,7 +15,7 @@
   "build": {
     "appId": "com.bajasoftworks.tontonanku",
     "directories": {
-      "output": "src/build/${version}"
+      "output": "../electron-build/tontonanku-build/${version}"
     },
     "win": {
       "publisherName": "Baja Softworks",
@@ -47,7 +47,7 @@
     "type": "git",
     "url": "https://github.com/Baja-Softworks/List-TontonanKu.git"
   },
-  "author": "Iqbal Anggoro",
+  "author": "Baja Softworks",
   "license": "MIT",
   "devDependencies": {
     "electron": "^11.1.1",
