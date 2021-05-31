@@ -15,14 +15,10 @@
 <body>
   <div class="container mt-4">
     <div class="row">
-      <h1 class="display-4 text-center col-md-6">
+      <h1 class="display-4 text-center col-md-12">
         <i class="fas fa-clipboard-list text-primary"></i><span class="text-primary"> Tontonan</span>Ku
       </h1>
-      <div class="col-md-6 align-self-center">
-        <input type="text" name="searchFilter" id="searchFilter" class="form-control" placeholder="Cari List...">
-      </div>
     </div>
-    <br>
     <form onsubmit="setTimeout(function(){window.location.reload();},1000);" id="show-form">
       <div class="form-group">
         <label for="title"><b>Judul</b></label>
@@ -48,7 +44,7 @@
         <select id="status" class="form-control">
           <option value="Berencana untuk Ditonton">Berencana untuk Ditonton</option>
           <option value="Sedang Ditonton">Sedang Ditonton</option>
-          <option value="Sudah Selesai">Sudah Selesai</option>
+          <option value="Sudah Selesai">Selesai Ditonton</option>
         </select>
       </div>
       <!-- <div class="form-group">
@@ -58,8 +54,8 @@
             <input type="url" id="links" class="form-control" placeholder="https://netflix.com" pattern="https://.*" required>
           </div> -->
       <input type="submit" value="Submit List" class="btn btn-primary btn-block add">
+      <br>
     </form>
-
     <!-- <div class="row">
       <div class="form-group col-md-6">
         <label for="sortOrder">Sort by</label>
@@ -69,12 +65,17 @@
         </select>
       </div>
     </div> -->
-
     <!-- Table Below Form -->
-    <table class="table table-striped mt-5">
+    <!-- <table id="myTable" class="table table-striped mt-5"> -->
+    <table id="myTable" class="table table-striped">
       <thead>
         <tr>
-          <th>Judul</th>
+          <div class="row justify-content-end">
+            <div class="col-3">
+              <input type="text" name="searchFilter" id="searchFilter" class="form-control" placeholder="Cari List...">
+            </div>
+          </div>
+          <th onclick="sortTable(1)">Judul <i class="fas fa-sort"></i></th>
           <th>Season</th>
           <th>Episode</th>
           <th>Status</th>
