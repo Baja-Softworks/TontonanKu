@@ -44,50 +44,44 @@ const menu = [
       } 
       ]
     },
-    {
-      label: 'Themes',
-      submenu: [
-        {
-          label: 'Default',
-          click: () => { 
-            mainWindow.loadFile('./src/index.html')
-           },
-        },
-        {
-          label: 'Day art Nakineko',
-          click: () => { 
-            mainWindow.loadFile('./src/themes/day.html')
-           },
-        },
-        {
-          label: 'Rain art Nakineko ',
-          click: () => { 
-            mainWindow.loadFile('./src/themes/rain.html')
-           },
-        },
-        {
-          label: 'Night art arsenixc',
-          click: () => { 
-            mainWindow.loadFile('./src/themes/night.html')
-           },
-        },
-        {
-          label: 'Sunset art Tanaka-kun',
-          click: () => { 
-            mainWindow.loadFile('./src/themes/sunset.html')
-           },
-        },
-        {
-          type: 'separator'
-        },
-        {
-          label: 'Kimi no Na wa.',
-          click: () => { 
-            mainWindow.loadFile('./src/themes/yourname.html')
-           },
-        },
-      ]
-    },
+    // {
+    //   label: 'Themes',
+    //   submenu: [
+    //     {
+    //       label: 'Default',
+    //       click: () => { 
+    //         mainWindow.loadFile('./src/index.html')
+    //        },
+    //     },
+    //     {
+    //       label: 'Full Moon',
+    //       click: () => { 
+    //         mainWindow.loadFile('./src/themes/night.html')
+    //        },
+    //     },
+    //     {
+    //       label: 'Full Moon',
+    //       click: () => { 
+    //         mainWindow.loadFile('./src/themes/rain.html')
+    //        },
+    //     },
+    //     {
+    //       label: 'Full Moon',
+    //       click: () => { 
+    //         mainWindow.loadFile('./src/themes/sunset.html')
+    //        },
+    //     },
+    //     // {
+    //     //   type: 'separator'
+    //     // },
+    //     // {
+    //     //   label: 'Kimi no Na wa.',
+    //     //   click: () => { 
+    //     //     mainWindow.loadFile('./src/themes/yourname.html')
+    //     //    },
+    //     // },
+    //   ]
+    // },
     {
       label: 'Help',
       submenu: [
@@ -95,7 +89,7 @@ const menu = [
           label: 'Help',
           click: async () => {
             const { shell } = require('electron')
-            await shell.openExternal('https://github.com/Baja-Softworks/TontonanKu')
+            await shell.openExternal('https://baja-softworks.github.io/TontonanKu')
           }
         },
         aboutMenuItem({
@@ -104,7 +98,17 @@ const menu = [
           text: `Electron: ${process.versions.electron} 
 Chrome: ${process.versions.chrome}
 Node.js: ${process.versions.node}` 
-        })
+        }),
+        {
+           type: 'separator'
+        },
+        {
+          label: 'Baja Softworks [Website]',
+          click: async () => {
+            const { shell } = require('electron')
+            await shell.openExternal('https://baja-softworks.github.io/')
+          }
+        },
       ],
     },
     ...(isDev
