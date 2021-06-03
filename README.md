@@ -2,7 +2,7 @@
 
 > **Aplikasi Desktop untuk Melihat List Tontonan**
 
-![TontonanKu - Preview](./assets/img/TontonanKu%20-%20Preview%201.0.1.gif "TontonanKu")
+![TontonanKu - Preview](https://bajasoft.my.id/assets/images/TontonanKu%20-%20Preview%201.0.1.gif "TontonanKu")
 
 ---
 
@@ -41,4 +41,4 @@ MIT
 - [x]  Dapat digunakan Secara Offline
 - [ ]  Cross platform (Hanya Support Platform OS Windows)
 
-![!Korone](./assets/img/9vxsii1i3s851.png)
+![!Korone](https://baja-softworks.github.io/assets/images/9vxsii1i3s851.png)
