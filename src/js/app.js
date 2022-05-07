@@ -12,6 +12,53 @@ class Show {
     }
 }
 
+// Local Storage
+class Store {
+
+    static getShows(show) {
+        let shows;
+
+        if (localStorage.getItem('shows') === null) {
+            shows = [];
+        } else {
+            shows = JSON.parse(localStorage.getItem('shows'));
+        }
+        return shows;
+    }
+
+    static addShow(show) {
+        const shows = Store.getShows();
+        shows.push(show);
+        localStorage.setItem('shows', JSON.stringify(shows));
+    }
+
+
+    static editShow(title, season, episode, status) {
+        const shows = Store.getShows();
+        shows.forEach((show, index) => {
+            if (show.id === +(selectEditRow.children[0].textContent)) {
+                show.title = title;
+                show.season = season;
+                show.episode = episode;
+                show.status = status;
+
+            }
+        })
+        localStorage.setItem('shows', JSON.stringify(shows));
+    }
+
+    static deleteShow(e) {
+        const shows = Store.getShows();
+        shows.forEach((show, index) => {
+            if (show.id === +(e.parentElement.parentElement.children[0].textContent)) {
+                shows.splice(index, 1)
+            }
+        })
+        localStorage.setItem('shows', JSON.stringify(shows));
+    }
+
+}
+
 // UI Class: Handle UI Tasks
 class UI {
     static displayShows() {
@@ -100,7 +147,7 @@ class UI {
     static deleteShow(e) {
         if (e.classList.contains('delete')) {
             e.parentElement.parentElement.remove();
-            UI.showAlert('Tontonan Berhasil dihapus', 'danger');
+            UI.showAlert('Watch List Deleted', 'danger');
             UI.clearFields();
             Store.deleteShow(e);
         }
@@ -129,54 +176,6 @@ class UI {
 
 }
 
-
-// Local Storage
-class Store {
-
-    static getShows(show) {
-        let shows;
-
-        if (localStorage.getItem('shows') === null) {
-            shows = [];
-        } else {
-            shows = JSON.parse(localStorage.getItem('shows'));
-        }
-        return shows;
-    }
-
-    static addShow(show) {
-        const shows = Store.getShows();
-        shows.push(show);
-        localStorage.setItem('shows', JSON.stringify(shows));
-    }
-
-
-    static editShow(title, season, episode, status) {
-        const shows = Store.getShows();
-        shows.forEach((show, index) => {
-            if (show.id === +(selectEditRow.children[0].textContent)) {
-                show.title = title;
-                show.season = season;
-                show.episode = episode;
-                show.status = status;
-
-            }
-        })
-        localStorage.setItem('shows', JSON.stringify(shows));
-    }
-
-    static deleteShow(e) {
-        const shows = Store.getShows();
-        shows.forEach((show, index) => {
-            if (show.id === +(e.parentElement.parentElement.children[0].textContent)) {
-                shows.splice(index, 1)
-            }
-        })
-        localStorage.setItem('shows', JSON.stringify(shows));
-    }
-
-}
-
 //Event: Display shows
 document.addEventListener('DOMContentLoaded', UI.displayShows);
 
@@ -193,22 +192,21 @@ document.querySelector('#show-form').addEventListener('submit', (e) => {
     console.log("checked " + checked)
 
     if (title === '' || status === '') {
-        UI.showAlert('Kolom Judul & Status tidak boleh kosong', 'danger');
+        UI.showAlert('Title and Status Columns cannot be empty', 'danger');
         return;
     } else if (e.target.elements[4].classList.contains('add')) {
         const show = new Show(title, season, episode, status);
         UI.addShowToList(show);
         Store.addShow(show);
-        UI.showAlert('Tontonan Berhasil ditambahkan', 'success');
+        UI.showAlert('Watch List Added Successfully', 'success');
         UI.clearFields();
     } else if (e.target.elements[4].classList.contains('edit')) {
         UI.editShowToList(title, season, episode, status);
-        UI.showAlert('Tontonan Berhasil diperbarui', 'success');
+        UI.showAlert('Watch List Updated', 'success');
         UI.clearFields();
     }
 
 });
-
 
 // Event: Delete a show
 document.querySelector('#show-list').addEventListener('click', (e1) => {
@@ -216,60 +214,5 @@ document.querySelector('#show-list').addEventListener('click', (e1) => {
     UI.editShow(e1.target); // edit btn target in Table
 });
 
+// Event: Search a show
 document.querySelector('#searchFilter').addEventListener('keyup', UI.filterList);
-
-// Sorting table based on title
-function sortTable(n) {
-    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-    table = document.getElementById("myTable");
-    switching = true;
-    //Set the sorting direction to ascending:
-    dir = "asc";
-    /*Make a loop that will continue until
-    no switching has been done:*/
-    while (switching) {
-      //start by saying: no switching is done:
-      switching = false;
-      rows = table.rows;
-      /*Loop through all table rows (except the
-      first, which contains table headers):*/
-      for (i = 1; i < (rows.length - 1); i++) {
-        //start by saying there should be no switching:
-        shouldSwitch = false;
-        /*Get the two elements you want to compare,
-        one from current row and one from the next:*/
-        x = rows[i].getElementsByTagName("TD")[n];
-        y = rows[i + 1].getElementsByTagName("TD")[n];
-        /*check if the two rows should switch place,
-        based on the direction, asc or desc:*/
-        if (dir == "asc") {
-          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-            //if so, mark as a switch and break the loop:
-            shouldSwitch = true;
-            break;
-          }
-        } else if (dir == "desc") {
-          if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-            //if so, mark as a switch and break the loop:
-            shouldSwitch = true;
-            break;
-          }
-        }
-      }
-      if (shouldSwitch) {
-        /*If a switch has been marked, make the switch
-        and mark that a switch has been done:*/
-        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-        switching = true;
-        //Each time a switch is done, increase this count by 1:
-        switchcount++;
-      } else {
-        /*If no switching has been done AND the direction is "asc",
-        set the direction to "desc" and run the while loop again.*/
-        if (switchcount == 0 && dir == "asc") {
-          dir = "desc";
-          switching = true;
-        }
-      }
-    }
-  }
