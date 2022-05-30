@@ -1,7 +1,7 @@
 const path = require('path');
-const { app, Menu } = require('electron');
+const { Menu } = require('electron');
 const { aboutMenuItem } = require('electron-util');
-const mainWindow = require('electron-main-window').getMainWindow();
+// const mainWindow = require('electron-main-window').getMainWindow();
 
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -44,44 +44,6 @@ const menu = [
       } 
       ]
     },
-    // {
-    //   label: 'Themes',
-    //   submenu: [
-    //     {
-    //       label: 'Default',
-    //       click: () => { 
-    //         mainWindow.loadFile('./src/index.html')
-    //        },
-    //     },
-    //     {
-    //       label: 'Full Moon',
-    //       click: () => { 
-    //         mainWindow.loadFile('./src/themes/night.html')
-    //        },
-    //     },
-    //     {
-    //       label: 'Full Moon',
-    //       click: () => { 
-    //         mainWindow.loadFile('./src/themes/rain.html')
-    //        },
-    //     },
-    //     {
-    //       label: 'Full Moon',
-    //       click: () => { 
-    //         mainWindow.loadFile('./src/themes/sunset.html')
-    //        },
-    //     },
-    //     // {
-    //     //   type: 'separator'
-    //     // },
-    //     // {
-    //     //   label: 'Kimi no Na wa.',
-    //     //   click: () => { 
-    //     //     mainWindow.loadFile('./src/themes/yourname.html')
-    //     //    },
-    //     // },
-    //   ]
-    // },
     {
       label: 'Help',
       submenu: [
@@ -89,7 +51,7 @@ const menu = [
           label: 'Help',
           click: async () => {
             const { shell } = require('electron')
-            await shell.openExternal('https://baja-softworks.github.io/TontonanKu')
+            await shell.openExternal('https://github.com/Baja-Softworks/TontonanKu')
           }
         },
         aboutMenuItem({
@@ -102,13 +64,13 @@ Node.js: ${process.versions.node}`
         {
            type: 'separator'
         },
-        {
-          label: 'Baja Softworks [Website]',
-          click: async () => {
-            const { shell } = require('electron')
-            await shell.openExternal('https://baja-softworks.github.io/')
-          }
-        },
+        // {
+        //   label: 'Baja Softworks [Website]',
+        //   click: async () => {
+        //     const { shell } = require('electron')
+        //     await shell.openExternal('https://baja-softworks.github.io/')
+        //   }
+        // },
       ],
     },
     ...(isDev
