@@ -27,7 +27,7 @@ function createMainWindow () {
  
    mainWindow = new BrowserWindow({
     title: 'TontonanKu',
-    width: 1000,
+    width: 1210,
     height: 675,
     icon: './src/img/favicon-32x32.png',
     //resizable: isDev ? true : false,
