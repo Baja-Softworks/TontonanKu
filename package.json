@@ -51,10 +51,10 @@
   "license": "MIT",
   "devDependencies": {
     "electron": "^11.5.0",
-    "electron-builder": "^22.8.1",
+    "electron-builder": "^23.0.3",
     "electron-reload": "^1.5.0",
     "electron-reloader": "^1.1.0",
-    "electron-updater": "^5.0.0",
+    "electron-updater": "4.3.9",
     "nodemon": "^2.0.4"
   },
   "dependencies": {
@@ -62,7 +62,7 @@
     "electron-main-window": "^1.0.4",
     "electron-progressbar": "^1.2.0",
     "electron-reloader": "^1.1.0",
-    "electron-updater": "^5.0.0",
+    "electron-updater": "4.3.9",
     "electron-util": "^0.14.2"
   }
 }
