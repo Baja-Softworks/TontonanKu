@@ -103,9 +103,8 @@ class UI {
       <td><b>${show.episode}</b></td>
       <td><b>${show.status}</b></td>
       <td>
-        <a href="#" class="btn btn-success btn-sm edit-btn btn-block">Edit</a>
-        <a href="#" class="btn btn-danger btn-sm delete btn-block">Hapus</a>
-      </td>
+        <a href="#" class="btn btn-success btn-sm edit-btn btn-block btn-options">Edit</a> <a href="#" class="btn btn-danger btn-sm delete btn-block btn-options">Delete</a>
+        </td>
     `;
         list.appendChild(row);
     }
