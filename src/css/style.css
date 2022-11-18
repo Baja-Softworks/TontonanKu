@@ -32,6 +32,10 @@ body {
   display: none;
 }
 
+.btn-options {
+  display: inline;
+}
+
 /* Auto Adding a Number to Each Row / Column */
 table {
   counter-reset: rowNumber;
@@ -45,4 +49,8 @@ table tr td:first-child::before {
   content: counter(rowNumber);
   min-width: 1em;
   margin-right: 0.5em;
+}
+
+th, td {
+  border: 2px solid #ddd;
 }
