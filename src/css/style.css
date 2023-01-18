@@ -16,6 +16,9 @@ body {
 /* ALERT */
 .container {
   padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .alert {
@@ -34,6 +37,11 @@ body {
 
 .btn-options {
   display: inline;
+  justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  .btn-options {display: flex; justify-content: center;}
 }
 
 /* Auto Adding a Number to Each Row / Column */
