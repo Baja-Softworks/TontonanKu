@@ -8,148 +8,92 @@
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="./css/all.min.css" />
   <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <!-- Mobile Responsive Tag -->
+  <meta name="viewport" content="width=device-width, initial-scale= .8, maximum-scale=1" />
   <title>TontonanKu</title>
-  <style>
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #007bff;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  /* padding: 8px 8px 8px 32px; */
-  text-decoration: none;
-  font-size: 25px;
-  color: #f1f1f1;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav h1 {
-  color: #f1f1f1;
-}
-
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-#main {
-  transition: margin-left .3s;
-  
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-  </style>
-  <script>
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
-
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft = "0";
-} 
-    </script>
 </head>
 
 <body id="main">
   <div class="container mt-4">
-    <div id="mySidenav" class="sidenav text-center">
-      <h1 class=" text-center">
-        <i class="fas fa-clipboard-list "></i><a href="/src/index.html"><span class=""> Tontonan</span>Ku</a>
-      </h1>
-      <br>
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="/src/backup/index.html">Backup</a>
-      <a href="#">About</a>
-    </div>
-    <span onclick="openNav()"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></span>
-
-    <div class="row" >
-      <h1 class="display-4 text-center col-md-12">
-        <i class="fas fa-clipboard-list text-primary"></i><span class="text-primary"> Tontonan</span>Ku
-      </h1>
-    </div>
-
-    <form onsubmit="setTimeout(function(){window.location.reload();},1000);" id="show-form">
-      <div class="form-group">
-        <label for="title"><b>Title</b></label>
-        <input type="text" id="title" class="form-control" value="">
+    <!-- Mobile Responsive Tag -->
+    <div class="col-xs-8 col-sm-8 col-md-12 col-lg-12">
+      <div class="row justify-content-center">
+        <h1 class="display-4 text-center col-sm-12">
+          <i class="fas fa-clipboard-list text-primary"></i><span class="text-primary"> Tontonan</span>Ku
+        </h1>
       </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="season"><b>Season</b></label>
-          <input type="number" id="season" class="form-control" value="">
+      <!-- Reload window after submiting form  -->
+      <form onsubmit="setTimeout(function(){window.location.reload();},1000);" id="show-form">
+      <!-- FORM START HERE -->
+        <div class="form-group">
+          <label for="title"><b>Title</b></label>
+          <input type="text" id="title" class="form-control" value="">
         </div>
-        <div class="form-group col-md-6">
-          <label for="episode"><b>Episode</b></label>
-          <input type="number" id="episode" class="form-control" value="">
+        <div class="form-row">
+          <div class="form-group col-sm-6">
+            <label for="season"><b>Season</b></label>
+            <input type="number" id="season" class="form-control" value="">
+          </div>
+          <div class="form-group col-sm-6">
+            <label for="episode"><b>Episode</b></label>
+            <input type="number" id="episode" class="form-control" value="">
+          </div>
         </div>
-      </div>
-      <!-- Status -->
-      <div class="form-group">
-        <label for="status"><b>Status</b></label>
-        <select id="status" class="form-control">
-          <option value="Plan to Watch">Plan to Watch</option>
-          <option value="Watching">Watching</option>
-          <option value="Completed">Completed</option>
-        </select>
-      </div>
-      <input type="submit" value="Submit List" class="btn btn-primary btn-block add">
+        <!-- Status -->
+        <div class="form-group">
+          <label for="status"><b>Status</b></label>
+          <select id="status" class="form-control">
+            <option value="Plan to Watch">Plan to Watch</option>
+            <option value="Watching">Watching</option>
+            <option value="Completed">Completed</option>
+          </select>
+        </div>
+        <input type="submit" value="Submit List" class="btn btn-primary btn-block add">
+        <br>
+      </form>
+
+      <!-- EXPORT/IMPORT BUTTON & SEARCH FILTER -->
+      <div class="row">
+        <div class="col-sm-6">
+          <input type="file" class="file" accept="application/json" required>   
+          <button onClick="window.location.reload();" class="sbm btn btn-primary btn-sm">
+            <i class="fa fa-upload" aria-hidden="true"></i> Upload List</button>
+          <button class="btn btn-success btn-sm" id="exportHistory" onclick="exportHistory()">
+            <i class="fa fa-download" aria-hidden="true"></i> Download List</button>
+          <a id="exportHistoryLink" style="display: none;">Export</a>
+        </div>
+        <br>
+        <br>
+        <div class="col-sm-6"><input type="text" name="searchFilter" id="searchFilter" class="form-control"
+            placeholder="Search List..."></div>
+        </div>
       <br>
-    </form>
-    <div class="row">
-      <div class="col-6">
 
-        <input type="file" class="file" accept="application/json" required>
-        <button onClick="window.location.reload();" class="sbm btn btn-primary btn-sm">Import List</button>
-        <button class="btn btn-primary btn-sm" id="exportHistory" onclick="exportHistory()">Export List</button> 
-        <a id="exportHistoryLink" style="display: none;">Export</a>
+      <!-- Mobile Responsive Tag -->
+      <div class="table-responsive fixed-table-body">
+      <!-- Table Below Form -->
+        <table id="myTable" class="table table-striped">
+          <thead>
+            <tr>
+              <th onclick="sortTable(1)">Title <i class="fas fa-sort"></i></th>
+              <th>Season</th>
+              <th>Episode</th>
+              <th>Status</th>
+              <th>Options</th>
+            </tr>
+          </thead>
+          <tbody id="show-list"></tbody>
+        </table>
       </div>
-      <div class="col-6"><input type="text" name="searchFilter" id="searchFilter" class="form-control" placeholder="Search List..."></div>
-  </div>
-    <!-- Table Below Form -->
-    <table id="myTable" class="table table-striped">
-      <thead>
-        <tr>
-          <th onclick="sortTable(1)">Title <i class="fas fa-sort"></i></th>
-          <th>Season</th>
-          <th>Episode</th>
-          <th>Status</th>
-          <th>Options</th>
-        </tr>
-      </thead>
-      <tbody id="show-list"></tbody>
-    </table>
-    <br />
-    <footer class="text-center">
-      <p>MIT License © 2021 Baja Softworks</a></p>
+      <br />
 
-    </footer>
+      <footer class="text-center">
+        <p>MIT License © 2021 Baja Softworks</a></p>
+      </footer>
+
+    </div>
   </div>
+  
   <script src="./js/app.js"></script>
   <script src="./js/exportDb.js"></script>
   <script src ="./js/sortTable.js"></script>
