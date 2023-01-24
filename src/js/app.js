@@ -97,13 +97,14 @@ class UI {
         const row = document.createElement('tr');
 
         row.innerHTML = `
-      <td class="uniqueId">${show.id}</td>
-      <td><b>${show.title}</b></td>
-      <td><b>${show.season}</b></td>
-      <td><b>${show.episode}</b></td>
-      <td><b>${show.status}</b></td>
-      <td>
-        <a href="#" class="btn btn-success btn-sm edit-btn btn-block btn-options">Edit</a> <a href="#" class="btn btn-danger btn-sm delete btn-block btn-options">Delete</a>
+        <td class="uniqueId">${show.id}</td>
+        <td><b>${show.title}</b></td>
+        <td><b>${show.season}</b></td>
+        <td><b>${show.episode}</b></td>
+        <td><b>${show.status}</b></td>
+        <td>
+        <a href="#" class="btn btn-success btn-sm edit-btn btn-block btn-options">Edit</a> 
+        <a href="#" class="btn btn-danger btn-sm delete btn-block btn-options">Delete</a>
         </td>
     `;
         list.appendChild(row);
@@ -215,3 +216,40 @@ document.querySelector('#show-list').addEventListener('click', (e1) => {
 
 // Event: Search a show
 document.querySelector('#searchFilter').addEventListener('keyup', UI.filterList);
+
+/* This is a function that is reloading the page after the form is submitted. */
+document.getElementById("uploadList").addEventListener("click",
+    function(event){
+        event.preventDefault()
+        location.reload()
+    }
+);
+
+/* This is a function that is reloading the page after the form is submitted. */
+document.getElementById("show-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    setTimeout(() => {
+        window.location.reload();
+    },1000)
+});
+
+/* Adding an event listener to the exportHistory button. When the button is clicked, it will call the
+exportHistory function. */
+document.getElementById("exportHistory").addEventListener("click", (e) => {
+    e.preventDefault();
+    exportHistory();
+});
+
+/* Adding an event listener to the sortTable button. When the button is clicked, it will call the
+sortTable function. */
+document.getElementById("sortTable").addEventListener("click", (e) => {
+    e.preventDefault();
+    sortTable(1);
+})
+
+// https://stackoverflow.com/questions/58616947/remove-html-tags-from-input-before-sending // https://stackoverflow.com/questions/15494994/remove-html-tags-in-input-on-keypress
+/* This is a function that is removing any HTML tags from the input field. */
+document.getElementById('title').addEventListener('change', (e)=> {
+    let tValue = e.target.value.replace(/<[^>]+>/gim, '');
+    e.target.value = tValue;
+});
