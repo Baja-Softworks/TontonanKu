@@ -3,12 +3,15 @@
 
 <head>
   <meta charset="UTF-8">
-  <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
-  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'" />
+  <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag || https://content-security-policy.com/examples/meta/  -->
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'nonce-2726c7f26c'" /> 
+  <!-- Mobile Responsive Tag -->
+  <meta name="viewport" content="width=device-width, initial-scale= .8, maximum-scale=1" />
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="./css/all.min.css" />
   <link rel="stylesheet" type="text/css" href="./css/style.css">
-  <title>TontonanKu</title>
+  <link rel="icon" type="image/x-icon" href="./img/icons.ico">
+  <title>TontonanKu - Watch List App</title>
 </head>
 
 <body>
@@ -18,7 +21,7 @@
         <i class="fas fa-clipboard-list text-primary"></i><span class="text-primary"> Tontonan</span>Ku
       </h1>
     </div>
-    <form onsubmit="setTimeout(function(){window.location.reload();},1000);" id="show-form">
+    <form id="show-form">
       <div class="form-group">
         <label for="title"><b>Title</b></label>
         <input type="text" id="title" class="form-control" value="">
@@ -47,10 +50,11 @@
     </form>
     <div class="row">
       <div class="col-6">
-
         <input type="file" class="file" accept="application/json" required>
-        <button onClick="window.location.reload();" class="sbm btn btn-primary btn-sm">Upload List</button>
-        <button class="btn btn-primary btn-sm" id="exportHistory" onclick="exportHistory()">Download List</button>
+        <button id="uploadList" class="sbm btn btn-primary btn-sm">
+          <i class="fa fa-upload" aria-hidden="true"></i> Upload List</button>
+        <button class="btn btn-success btn-sm" id="exportHistory"> 
+          <i class="fa fa-download" aria-hidden="true"></i> Download List</button>
         <a id="exportHistoryLink" style="display: none;">Export</a>
       </div>
       <div class="col-6"><input type="text" name="searchFilter" id="searchFilter" class="form-control"
@@ -61,7 +65,7 @@
     <table id="myTable" class="table table-striped">
       <thead>
         <tr>
-          <th onclick="sortTable(1)">Title <i class="fas fa-sort"></i></th>
+          <th id="sortTable">Title <i class="fas fa-sort"></i></th>
           <th>Season</th>
           <th>Episode</th>
           <th>Status</th>
@@ -79,12 +83,11 @@
   <script src="./js/app.js"></script>
   <script src="./js/exportDb.js"></script>
   <script src="./js/sortTable.js"></script>
-  <script>
-    const { ipcRenderer } = require('electron');
-    // Console.log for autoUpdates
-    ipcRenderer.on('message', (event, text) => {
-      console.log(text) // prints "pong"
-    })
+  <script nonce="2726c7f26c">
+    // const {ipcRenderer} = require('electron')
+    // ipcRenderer.on('message', (event, text) => { // Console.log for autoUpdates
+    //   console.log(text) // prints "pong"
+    // })
   </script>
 </body>
 
