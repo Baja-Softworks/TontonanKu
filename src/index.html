@@ -1,17 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <title>TontonanKu - Watch List App</title>
+  <meta name="description" content="easily track your watch-list so that you can remember the exact episode!">
   <meta charset="UTF-8">
   <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag || https://content-security-policy.com/examples/meta/  -->
   <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'nonce-2726c7f26c'" /> 
   <!-- Mobile Responsive Tag -->
   <meta name="viewport" content="width=device-width, initial-scale= .8, maximum-scale=1" />
+  <!-- Stylesheet -->
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="./css/all.min.css" />
   <link rel="stylesheet" type="text/css" href="./css/style.css">
   <link rel="icon" type="image/x-icon" href="./img/icons.ico">
-  <title>TontonanKu - Watch List App</title>
+  <!-- Facebook Meta Tags -->
+  <meta property="og:title" content="TontonanKu">
+  <meta property="og:description" content="Watch List App">
+  <meta property="og:site_name" content="TontonanKu - Watch List App">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ttnku.netlify.app/">
+  <meta property="og:image" content="https://baja-softworks.github.io/assets/images/TontonanKu-v1-Preview.png">
+<!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@bajasoftworks">
+  <meta name="twitter:creator" content="@bajasoftworks">
+  <meta name="twitter:title" content="TontonanKu - Watch List App">
+  <meta name="twitter:description" content="TontonanKu - Watch List App">
+  <meta name="twitter:image" content="https://baja-softworks.github.io/assets/images/TontonanKu-v1-Preview.png">
 </head>
 
 <body>
@@ -50,12 +66,13 @@
     </form>
     <div class="row">
       <div class="col-6">
-        <input type="file" class="file" accept="application/json" required>
+        <label for="file" style="display: none;"><b>Status</b></label>
+        <input id="file" type="file" class="file" accept="application/json" required>
         <button id="uploadList" class="sbm btn btn-primary btn-sm">
           <i class="fa fa-upload" aria-hidden="true"></i> Upload List</button>
         <button class="btn btn-success btn-sm" id="exportHistory"> 
           <i class="fa fa-download" aria-hidden="true"></i> Download List</button>
-        <a id="exportHistoryLink" style="display: none;">Export</a>
+        <a href="" id="exportHistoryLink" style="display: none;">Export</a>
       </div>
       <div class="col-6"><input type="text" name="searchFilter" id="searchFilter" class="form-control"
           placeholder="Search List..."></div>
