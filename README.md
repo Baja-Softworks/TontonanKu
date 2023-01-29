@@ -2,13 +2,11 @@
 <!-- [![Windows](https://img.shields.io/badge/platform-Windows-0078d7.svg)](https://img.shields.io/badge/platform-Windows-0078d7.svg) [![Downloaded](https://img.shields.io/github/downloads/Baja-Softworks/TontonanKu/latest/total?color=0078d7)](https://img.shields.io/github/downloads/Baja-Softworks/TontonanKu/latest/total?color=0078d7) [![GitHub release](https://img.shields.io/github/release-date/Baja-Softworks/TontonanKu?color=0078d7)](https://github.com/Baja-Softworks/TontonanKu/releases) [![GitHub release](https://img.shields.io/github/release/Baja-Softworks/TontonanKu?color=0078d7)](https://github.com/Baja-Softworks/TontonanKu/releases)
 ## TontonanKu is a Note Watch List Application// Aplikasi untuk Melihat List Tontonan -->
 
-![TontonanKu - Preview](https://bajasoft.my.id/assets/images/TontonanKu%20-%20Preview%201.0.1.gif "TontonanKu")
-
 ![!Korone](https://baja-softworks.github.io/assets/images/9vxsii1i3s851.png)
 
 ## 💽 Installation
 
-### Web App
+### Web Apps
 
 <https://ttnku.netlify.app/>
 
@@ -18,6 +16,7 @@ Download from [GitHub Releases](https://github.com/Baja-Softworks/TontonanKu/rel
 
 ## 🛠 Tech Stack
 
+* Vanilla JavaScript
 * Electron
 * Bootstrap
 * localStorage
@@ -25,10 +24,10 @@ Download from [GitHub Releases](https://github.com/Baja-Softworks/TontonanKu/rel
 ## ⭐ Features
 
 * Self-hosted
-* Simple UI
+* Simple & Mobile Responsive UI
+* Import/Export Watch-List
 * Auto Update (Electron)
-* Auto Import/Export List (wip)
-* Cross Platform (wip)
+* Cross Platform (WIP)
 
 ## 🤝 Contribution
 
@@ -38,6 +37,10 @@ Development Roadmap see: [Trello](https://trello.com/b/DSrcGXI0/mywatchlist)
 ### License
 
 MIT
+
+### Preview
+
+![TontonanKu - Preview](https://bajasoft.my.id/assets/images/TontonanKu%20-%20Preview%201.0.1.gif "TontonanKu")
 
 <!-- ## ⌨️ Development
 
