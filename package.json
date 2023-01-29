@@ -1,7 +1,7 @@
 {
   "name": "tontonanku",
   "productName": "TontonanKu",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Aplikasi Desktop untuk Melihat List Tontonan",
   "main": "main.js",
   "scripts": {
